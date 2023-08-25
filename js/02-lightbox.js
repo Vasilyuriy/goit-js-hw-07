@@ -22,10 +22,4 @@ function createMarkUp(arr) {
     .join("");
 }
 container.insertAdjacentHTML("beforeend", createMarkUp(galleryItems));
-container.addEventListener("click", handlerProductClick);
-
-function handlerProductClick(evt) {
-  evt.preventDefault();
-  let galleryBox = new SimpleLightbox(".gallery a");
-  gallery.on("show.simplelightbox", function () {});
-}
+new SimpleLightbox(".gallery a", { captionsData: "alt", captionDelay: 250 });
